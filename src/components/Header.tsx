@@ -8,7 +8,6 @@ import { useLanguage } from '@/hooks/useLanguage';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const location = useLocation();
   const { language, setLanguage, t } = useLanguage();
 
@@ -34,9 +33,9 @@ const Header = () => {
 
   return (
     <>
-      {/* Sticky Contact Bar */}
+      {/* Sticky Contact Bar with Language Switcher */}
       <div className="bg-gradient-to-r from-saffron-500 to-gold-500 text-white py-2 px-4 text-center text-sm font-medium">
-        <div className="flex items-center justify-center space-x-6">
+        <div className="flex items-center justify-center space-x-6 relative">
           <button onClick={handleCall} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Phone size={16} />
             <span>{t('callNow')}: +91 99999 99999</span>
@@ -46,6 +45,31 @@ const Header = () => {
             <MessageCircle size={16} />
             <span>{t('chatWhatsApp')}</span>
           </button>
+          
+          {/* Language Switcher in Announcement Bar */}
+          <div className="absolute right-0 flex items-center space-x-2">
+            <Globe size={16} />
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-2 py-1 rounded text-xs transition-all ${
+                language === 'en' 
+                  ? 'bg-white text-saffron-600 font-semibold' 
+                  : 'bg-white/20 hover:bg-white/30'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage('te')}
+              className={`px-2 py-1 rounded text-xs transition-all ${
+                language === 'te' 
+                  ? 'bg-white text-saffron-600 font-semibold' 
+                  : 'bg-white/20 hover:bg-white/30'
+              }`}
+            >
+              తె
+            </button>
+          </div>
         </div>
       </div>
 
@@ -126,48 +150,6 @@ const Header = () => {
               >
                 {t('contact')}
               </Link>
-              
-              {/* Language Switcher */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-saffron-500 transition-colors"
-                >
-                  <Globe size={16} />
-                  <span>{language === 'en' ? 'English' : 'తెలుగు'}</span>
-                </button>
-                
-                {isLanguageMenuOpen && (
-                  <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                    <button
-                      onClick={() => {
-                        setLanguage('en');
-                        setIsLanguageMenuOpen(false);
-                      }}
-                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
-                        language === 'en' 
-                          ? 'bg-saffron-50 text-saffron-600 font-medium' 
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      English
-                    </button>
-                    <button
-                      onClick={() => {
-                        setLanguage('te');
-                        setIsLanguageMenuOpen(false);
-                      }}
-                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
-                        language === 'te' 
-                          ? 'bg-saffron-50 text-saffron-600 font-medium' 
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      తెలుగు
-                    </button>
-                  </div>
-                )}
-              </div>
 
               <Button onClick={handleWhatsApp} className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white">
                 {t('bookConsultation')}
@@ -249,39 +231,6 @@ const Header = () => {
                 >
                   {t('contact')}
                 </Link>
-                
-                {/* Mobile Language Switcher */}
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="text-sm text-gray-600 mb-2">Language:</p>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => {
-                        setLanguage('en');
-                        setIsMenuOpen(false);
-                      }}
-                      className={`px-3 py-1 rounded text-sm transition-colors ${
-                        language === 'en' 
-                          ? 'bg-saffron-500 text-white' 
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      English
-                    </button>
-                    <button
-                      onClick={() => {
-                        setLanguage('te');
-                        setIsMenuOpen(false);
-                      }}
-                      className={`px-3 py-1 rounded text-sm transition-colors ${
-                        language === 'te' 
-                          ? 'bg-saffron-500 text-white' 
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                    >
-                      తెలుగు
-                    </button>
-                  </div>
-                </div>
 
                 <Button onClick={handleWhatsApp} className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white w-full">
                   {t('bookConsultation')}

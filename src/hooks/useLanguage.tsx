@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'en' | 'te';
@@ -66,7 +65,8 @@ const translations = {
     followUs: 'Follow Us',
     allRightsReserved: 'All rights reserved.',
     address: 'Hyderabad, Telangana, India',
-    hours: 'Mon-Sun: 9:00 AM - 8:00 PM'
+    hours: 'Mon-Sun: 9:00 AM - 8:00 PM',
+    visitLocation: 'Visit Our Location'
   },
   te: {
     // Header
@@ -122,7 +122,8 @@ const translations = {
     followUs: 'మమ్మల్ని అనుసరించండి',
     allRightsReserved: 'అన్ని హక్కులు రక్షించబడ్డాయి.',
     address: 'హైదరాబాద్, తెలంగాణ, భారతదేశం',
-    hours: 'సోమ-ఆది: ఉదయం 9:00 - సాయంత్రం 8:00'
+    hours: 'సోమ-ఆది: ఉదయం 9:00 - సాయంత్రం 8:00',
+    visitLocation: 'మా స్థానాన్ని సందర్శించండి'
   }
 };
 
