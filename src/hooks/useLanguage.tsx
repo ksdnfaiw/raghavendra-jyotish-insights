@@ -15,7 +15,7 @@ const translations = {
     // Header
     callNow: 'Call Now',
     chatWhatsApp: 'Chat on WhatsApp',
-    siteName: 'Sri Raghavendra Jyotishalayam',
+    siteName: 'Sri Raghavendra Jyotishalayam.',
     tagline: 'Authentic Vedic Astrology',
     home: 'Home',
     services: 'Services',

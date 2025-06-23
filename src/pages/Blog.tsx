@@ -200,8 +200,7 @@ const BlogPage = () => {
                     variant="outline" 
                     className="w-full border-saffron-300 text-saffron-600 hover:bg-saffron-50"
                   >
-                    Read Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    Comming Soon
                   </Button>
                 </CardContent>
               </Card>
@@ -209,14 +208,7 @@ const BlogPage = () => {
           </div>
 
           {/* Load More Button */}
-          <div className="text-center mt-12">
-            <Button 
-              variant="outline"
-              className="border-saffron-300 text-saffron-600 hover:bg-saffron-50 px-8 py-3"
-            >
-              Load More Articles
-            </Button>
-          </div>
+        
         </div>
       </section>
 
@@ -240,13 +232,7 @@ const BlogPage = () => {
               Subscribe
             </Button>
           </div>
-          <Button 
-            onClick={handleConsultation}
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-deepblue-700"
-          >
-            Book Personal Consultation
-          </Button>
+         
         </div>
       </section>
 
