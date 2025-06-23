@@ -1,13 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Phone, MessageCircle, Menu, X } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, Globe } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,12 +39,12 @@ const Header = () => {
         <div className="flex items-center justify-center space-x-6">
           <button onClick={handleCall} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Phone size={16} />
-            <span>Call Now: +91 99999 99999</span>
+            <span>{t('callNow')}: +91 99999 99999</span>
           </button>
           <span className="hidden md:inline">|</span>
           <button onClick={handleWhatsApp} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <MessageCircle size={16} />
-            <span>Chat on WhatsApp</span>
+            <span>{t('chatWhatsApp')}</span>
           </button>
         </div>
       </div>
@@ -59,9 +62,9 @@ const Header = () => {
               </div>
               <div>
                 <h1 className="font-cinzel font-semibold text-xl text-deepblue-900">
-                  Sri Raghavendra Jyotishalayam
+                  {t('siteName')}
                 </h1>
-                <p className="text-sm text-gray-600">Authentic Vedic Astrology</p>
+                <p className="text-sm text-gray-600">{t('tagline')}</p>
               </div>
             </Link>
 
@@ -75,7 +78,7 @@ const Header = () => {
                     : 'text-gray-700 hover:text-saffron-500'
                 }`}
               >
-                Home
+                {t('home')}
               </Link>
               <Link 
                 to="/services" 
@@ -85,7 +88,7 @@ const Header = () => {
                     : 'text-gray-700 hover:text-saffron-500'
                 }`}
               >
-                Services
+                {t('services')}
               </Link>
               <Link 
                 to="/about" 
@@ -95,13 +98,13 @@ const Header = () => {
                     : 'text-gray-700 hover:text-saffron-500'
                 }`}
               >
-                About
+                {t('about')}
               </Link>
               <Link 
                 to="/#testimonials" 
                 className="text-gray-700 hover:text-saffron-500 transition-colors"
               >
-                Testimonials
+                {t('testimonials')}
               </Link>
               <Link 
                 to="/blog" 
@@ -111,7 +114,7 @@ const Header = () => {
                     : 'text-gray-700 hover:text-saffron-500'
                 }`}
               >
-                Blog
+                {t('blog')}
               </Link>
               <Link 
                 to="/contact" 
@@ -121,10 +124,53 @@ const Header = () => {
                     : 'text-gray-700 hover:text-saffron-500'
                 }`}
               >
-                Contact
+                {t('contact')}
               </Link>
+              
+              {/* Language Switcher */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-saffron-500 transition-colors"
+                >
+                  <Globe size={16} />
+                  <span>{language === 'en' ? 'English' : 'తెలుగు'}</span>
+                </button>
+                
+                {isLanguageMenuOpen && (
+                  <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
+                    <button
+                      onClick={() => {
+                        setLanguage('en');
+                        setIsLanguageMenuOpen(false);
+                      }}
+                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
+                        language === 'en' 
+                          ? 'bg-saffron-50 text-saffron-600 font-medium' 
+                          : 'text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage('te');
+                        setIsLanguageMenuOpen(false);
+                      }}
+                      className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
+                        language === 'te' 
+                          ? 'bg-saffron-50 text-saffron-600 font-medium' 
+                          : 'text-gray-700 hover:bg-gray-50'
+                      }`}
+                    >
+                      తెలుగు
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <Button onClick={handleWhatsApp} className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white">
-                Book Consultation
+                {t('bookConsultation')}
               </Button>
             </nav>
 
@@ -150,7 +196,7 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Home
+                  {t('home')}
                 </Link>
                 <Link 
                   to="/services" 
@@ -161,7 +207,7 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Services
+                  {t('services')}
                 </Link>
                 <Link 
                   to="/about" 
@@ -172,14 +218,14 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
+                  {t('about')}
                 </Link>
                 <Link 
                   to="/#testimonials" 
                   className="text-gray-700 hover:text-saffron-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Testimonials
+                  {t('testimonials')}
                 </Link>
                 <Link 
                   to="/blog" 
@@ -190,7 +236,7 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Blog
+                  {t('blog')}
                 </Link>
                 <Link 
                   to="/contact" 
@@ -201,10 +247,44 @@ const Header = () => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  {t('contact')}
                 </Link>
+                
+                {/* Mobile Language Switcher */}
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-sm text-gray-600 mb-2">Language:</p>
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={() => {
+                        setLanguage('en');
+                        setIsMenuOpen(false);
+                      }}
+                      className={`px-3 py-1 rounded text-sm transition-colors ${
+                        language === 'en' 
+                          ? 'bg-saffron-500 text-white' 
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => {
+                        setLanguage('te');
+                        setIsMenuOpen(false);
+                      }}
+                      className={`px-3 py-1 rounded text-sm transition-colors ${
+                        language === 'te' 
+                          ? 'bg-saffron-500 text-white' 
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      తెలుగు
+                    </button>
+                  </div>
+                </div>
+
                 <Button onClick={handleWhatsApp} className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white w-full">
-                  Book Consultation
+                  {t('bookConsultation')}
                 </Button>
               </nav>
             </div>
