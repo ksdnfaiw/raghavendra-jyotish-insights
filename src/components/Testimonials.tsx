@@ -58,54 +58,54 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <Badge className="bg-gradient-to-r from-saffron-100 to-gold-100 text-saffron-700 border-saffron-200 mb-4">
             Client Testimonials
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             <span className="text-deepblue-900">What Our</span>
             <span className="gradient-text font-cinzel"> Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Over 500+ satisfied clients across Telugu states trust our authentic Vedic astrology guidance. 
             Here's what they have to say about their transformative experiences.
           </p>
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text mb-2">500+</div>
-            <div className="text-gray-600">Happy Clients</div>
+            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">500+</div>
+            <div className="text-gray-600 text-sm sm:text-base">Happy Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text mb-2">98%</div>
-            <div className="text-gray-600">Accuracy Rate</div>
+            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">98%</div>
+            <div className="text-gray-600 text-sm sm:text-base">Accuracy Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text mb-2">4.9/5</div>
-            <div className="text-gray-600">Average Rating</div>
+            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">4.9/5</div>
+            <div className="text-gray-600 text-sm sm:text-base">Average Rating</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text mb-2">10+</div>
-            <div className="text-gray-600">Years Experience</div>
+            <div className="text-2xl sm:text-3xl font-bold gradient-text mb-2">10+</div>
+            <div className="text-gray-600 text-sm sm:text-base">Years Experience</div>
           </div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
               className="relative overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-white to-orange-50"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 opacity-20">
-                  <Quote className="w-8 h-8 text-saffron-500" />
+                  <Quote className="w-6 sm:w-8 h-6 sm:h-8 text-saffron-500" />
                 </div>
 
                 {/* Rating */}
@@ -113,32 +113,32 @@ const Testimonials = () => {
                   {[...Array(testimonial.rating)].map((_, starIndex) => (
                     <Star 
                       key={starIndex} 
-                      className="w-5 h-5 fill-gold-400 text-gold-400" 
+                      className="w-4 sm:w-5 h-4 sm:h-5 fill-gold-400 text-gold-400" 
                     />
                   ))}
                 </div>
 
                 {/* Testimonial Text */}
-                <p className={`text-gray-700 mb-6 leading-relaxed ${
+                <p className={`text-gray-700 mb-6 leading-relaxed text-sm sm:text-base ${
                   testimonial.isTeluguReview ? 'font-telugu' : ''
                 }`}>
                   "{testimonial.text}"
                 </p>
 
                 {/* Client Info */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-saffron-400 to-gold-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-saffron-400 to-gold-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs sm:text-sm">
                       {testimonial.image}
                     </span>
                   </div>
                   <div>
-                    <h4 className={`font-semibold text-deepblue-900 ${
+                    <h4 className={`font-semibold text-deepblue-900 text-sm sm:text-base ${
                       testimonial.isTeluguReview ? 'font-telugu' : ''
                     }`}>
                       {testimonial.name}
                     </h4>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                    <p className="text-xs sm:text-sm text-gray-600">{testimonial.location}</p>
                     <Badge 
                       variant="secondary" 
                       className="text-xs mt-1 bg-saffron-100 text-saffron-700"
@@ -152,41 +152,18 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Video Testimonial Section */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-deepblue-900 mb-8">
-            Watch Video Testimonials
-          </h3>
-          <div className="bg-gradient-to-r from-saffron-500 to-gold-500 rounded-2xl p-8 text-white">
-            <div className="aspect-video bg-black/20 rounded-xl flex items-center justify-center mb-6">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">▶️</span>
-                </div>
-                <p className="text-lg opacity-90">Video testimonials coming soon!</p>
-                <p className="text-sm opacity-75">
-                  We're currently collecting video testimonials from our satisfied clients
-                </p>
-              </div>
-            </div>
-            <p className="text-lg opacity-90">
-              Join hundreds of satisfied clients who have transformed their lives with our guidance
-            </p>
-          </div>
-        </div>
-
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-deepblue-600 to-deepblue-700 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Life?</h3>
-            <p className="text-lg mb-6 opacity-90">
+        <div className="text-center mt-12 sm:mt-16">
+          <div className="bg-gradient-to-r from-deepblue-600 to-deepblue-700 rounded-2xl p-6 sm:p-8 text-white">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Transform Your Life?</h3>
+            <p className="text-base sm:text-lg mb-6 opacity-90">
               Join our community of satisfied clients and experience the power of authentic Vedic astrology
             </p>
             <button 
               onClick={() => window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation after reading the testimonials', '_blank')}
-              className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:shadow-xl"
+              className="bg-gradient-to-r from-saffron-500 to-gold-500 hover:from-saffron-600 hover:to-gold-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-xl"
             >
-              📞 Book Your Consultation Now
+              Book Your Consultation Now
             </button>
           </div>
         </div>
