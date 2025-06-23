@@ -19,9 +19,15 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleWhatsApp = () => {
-    window.open(`https://wa.me/919573686899?text=${t('consultation')}`, '_blank');
-  };
+const handleWhatsApp = () => {
+  const message = t('consultation'); // e.g., "Namaskaram Pandit Ji, I would like to learn more about your astrology consultation services."
+  const encodedMessage = encodeURIComponent(message)
+    .replace(/'/g, "%27")
+    .replace(/"/g, "%22")
+    .replace(/%20/g, "+"); // Replace encoded spaces with "+" for better WhatsApp compatibility
+  const whatsappUrl = `https://wa.me/919573686899?text=${encodedMessage}`;
+  window.open(whatsappUrl, '_blank');
+};
 
   const handleCall = () => {
     window.open('tel:+919573686899', '_self');
