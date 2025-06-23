@@ -68,7 +68,7 @@ const BlogPage = () => {
   const categories = ["All", "Marriage Astrology", "Career", "Gemstones", "Muhurat", "Vastu Shastra", "Vedic Astrology"];
 
   const handleConsultation = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I read your blog and would like to book a consultation', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I read your blog and would like to book a consultation', '_blank');
   };
 
   return (

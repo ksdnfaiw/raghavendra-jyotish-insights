@@ -26,7 +26,7 @@ const translations = {
     bookConsultation: 'Book Consultation',
     
     // Hero Section
-    heroTitle: '10+ Years of Authentic Vedic Astrology Guidance in Hyderabad',
+    heroTitle: '25+ Years of Authentic Vedic Astrology Guidance in Hyderabad',
     heroSubtitle: 'Discover your destiny with ancient wisdom and personalized guidance from certified Vedic astrologer Pandit Sri Raghavendra',
     getReading: 'Get Your Reading',
     learnMore: 'Learn More',
@@ -64,9 +64,10 @@ const translations = {
     contactInfo: 'Contact Information',
     followUs: 'Follow Us',
     allRightsReserved: 'All rights reserved.',
-    address: 'Hyderabad, Telangana, India',
-    hours: 'Mon-Sun: 9:00 AM - 8:00 PM',
-    visitLocation: 'Visit Our Location'
+    address: 'H.No.6-99-12, Chanda Nagar MMTS Lane, Huda Colony, Chanda Nagar-500050',
+    hours: 'Mon-Sun: 10:00 AM - 6:00 PM',
+    visitLocation: 'Visit Our Location',
+    consultation: 'Namaskaram Pandit Ji, I would like to learn more about your astrology consultation services.'
   },
   te: {
     // Header
@@ -83,7 +84,7 @@ const translations = {
     bookConsultation: 'సంప్రదింపు బుక్ చేయండి',
     
     // Hero Section
-    heroTitle: 'హైదరాబాద్‌లో 10+ సంవత్సరాల ప్రామాణిక వైదిక జ్యోతిష్య మార్గదర్శకత్వం',
+    heroTitle: 'హైదరాబాద్‌లో 25+ సంవత్సరాల ప్రామాణిక వైదిక జ్యోతిష్య మార్గదర్శకత్వం',
     heroSubtitle: 'ప్రమాణీకృత వైదిక జ్యోతిష్యుడు పండిత్ శ్రీ రాఘవేంద్ర నుండి పురాతన జ్ఞానం మరియు వ్యక్తిగత మార్గదర్శకత్వంతో మీ విధిని తెలుసుకోండి',
     getReading: 'మీ రీడింగ్ పొందండి',
     learnMore: 'మరింత తెలుసుకోండి',
@@ -121,9 +122,10 @@ const translations = {
     contactInfo: 'సంప్రదింపు సమాచారం',
     followUs: 'మమ్మల్ని అనుసరించండి',
     allRightsReserved: 'అన్ని హక్కులు రక్షించబడ్డాయి.',
-    address: 'హైదరాబాద్, తెలంగాణ, భారతదేశం',
-    hours: 'సోమ-ఆది: ఉదయం 9:00 - సాయంత్రం 8:00',
-    visitLocation: 'మా స్థానాన్ని సందర్శించండి'
+    address: 'ఇంటి నెం.6-99-12, చందా నగర్ MMTS లేన్, హుడా కాలనీ, చందా నగర్-500050',
+    hours: 'సోమ-ఆది: ఉదయం 10:00 - సాయంత్రం 6:00',
+    visitLocation: 'మా స్థానాన్ని సందర్శించండి',
+    consultation:'నమస్కారం పండిట్ జీ, మీ జ్యోతిష సంప్రదింపు సేవల గురించి నేను మరింత తెలుసుకోవాలనుకుంటున్నాను.'
   }
 };
 

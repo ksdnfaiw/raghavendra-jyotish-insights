@@ -20,11 +20,11 @@ const Header = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation', '_blank');
+    window.open(`https://wa.me/919573686899?text=${t('consultation')}`, '_blank');
   };
 
   const handleCall = () => {
-    window.open('tel:+919999999999', '_self');
+    window.open('tel:+919573686899', '_self');
   };
 
   const isActiveLink = (path: string) => {
@@ -38,7 +38,7 @@ const Header = () => {
         <div className="flex items-center justify-center space-x-6 relative">
           <button onClick={handleCall} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Phone size={16} />
-            <span>{t('callNow')}: +91 99999 99999</span>
+            <span>{t('callNow')}: +91 9573 686899</span>
           </button>
           <span className="hidden md:inline">|</span>
           <button onClick={handleWhatsApp} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">

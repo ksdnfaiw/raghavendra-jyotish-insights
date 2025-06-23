@@ -9,7 +9,7 @@ const Services = () => {
   const { t } = useLanguage();
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I would like to book a consultation', '_blank');
   };
 
   const services = [

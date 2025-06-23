@@ -9,7 +9,7 @@ import { Award, BookOpen, Users, Star, Clock, Heart } from 'lucide-react';
 
 const AboutPage = () => {
   const handleConsultation = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to know more about your services and book a consultation', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I would like to know more about your services and book a consultation', '_blank');
   };
 
   const achievements = [

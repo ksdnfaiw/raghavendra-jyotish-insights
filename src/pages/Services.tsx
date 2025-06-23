@@ -54,7 +54,7 @@ const ServicesPage = () => {
   ];
 
   const handleConsultation = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation for the services I saw on your website', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I would like to book a consultation for the services I saw on your website', '_blank');
   };
 
   return (

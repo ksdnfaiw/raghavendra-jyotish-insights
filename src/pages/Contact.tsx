@@ -28,22 +28,22 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Hi, I'm ${formData.name}. I'm interested in ${formData.service}. ${formData.message}. My contact: ${formData.email}, ${formData.phone}`;
-    window.open(`https://wa.me/919999999999?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+    window.open(`https://wa.me/919573686899?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I would like to book a consultation', '_blank');
   };
 
   const handleCall = () => {
-    window.open('tel:+919999999999', '_self');
+    window.open('tel:+919573686899', '_self');
   };
 
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 99999 99999",
+      details: "+91 9573 686899",
       action: handleCall,
       description: "Call us directly for immediate assistance"
     },

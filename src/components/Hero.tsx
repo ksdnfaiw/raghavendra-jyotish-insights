@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useLanguage();
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919999999999?text=Hi, I would like to book a consultation', '_blank');
+    window.open('https://wa.me/919573686899?text=Hi, I would like to book a consultation', '_blank');
   };
 
   const scrollToServices = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold text-deepblue-900 leading-tight">
+              <h1 className="text-2xl md:text-2xl lg:text-4xl font-cinzel font-bold text-deepblue-900 leading-tight">
                 {t('heroTitle')}
               </h1>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -76,17 +76,8 @@ const Hero = () => {
 
           {/* Image placeholder */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-saffron-100 to-gold-100 rounded-2xl shadow-2xl overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-saffron-200/50 to-gold-200/50 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-32 h-32 bg-gradient-to-br from-saffron-400 to-gold-500 rounded-full mx-auto flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-4xl">ॐ</span>
-                  </div>
-                  <p className="text-gray-600 font-medium">Pandit Sri Raghavendra</p>
-                  <p className="text-sm text-gray-500">Vedic Astrology Expert</p>
-                </div>
-              </div>
-            </div>
+               <img style={{width:"100%",height:"85%",borderRadius:"20px"}} src="https://media.istockphoto.com/id/1394514999/photo/woman-holding-a-astrology-book-astrological-wheel-projection-choose-a-zodiac-sign-astrology.jpg?s=612x612&w=0&k=20&c=XIH-aZ13vTzkcGUTbVLwPcp_TUB4hjVdeSSY-taxlOo="/>
+          
             
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
