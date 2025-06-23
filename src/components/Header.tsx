@@ -84,7 +84,7 @@ const handleWhatsApp = () => {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
       }`}>
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-8">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-saffron-400 to-gold-500 rounded-full flex items-center justify-center">
