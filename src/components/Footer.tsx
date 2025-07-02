@@ -62,7 +62,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-saffron-300">{t('followUs')}</h4>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61578129802443" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
